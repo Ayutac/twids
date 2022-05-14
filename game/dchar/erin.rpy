@@ -35,17 +35,24 @@ init -4 python:
         ("By the way, there are rooms upstairs if you need a place to sleep.", "default")]       
         
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        ("Hey! Nice day today, isn't it?", "happy")]
+        ("Hey! Nice day today, isn't it? I kind of want to roll down the hill to be honest.", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Want me to teach you chess?", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("The door's out of mana again?", "surprised")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "Have some pizza, on the house! Just don't tell Lyonette." "sad" ]
+        "Have some pizza, on the house! Just don't tell Lyonette." "happy" ]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         "There's something I want to ask... Wait, damn. It was on the tip of my tongue! Nevermind, I guess it wasn't  important." "default"]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         "I keep telling you, Goblins are cool. Just talk to them like a normal person and you'll be fine!" "happy"]
+    linesTalking[iC][MS_GOOD_FRIEND] += [
+        "Have you met Belgrade and Anand? You should meet them! I think you might like them. Maybe. Or maybe you're more of a Pawn kind of person. He's nice too! But lately, he's been spending more time with Lyonette whenever he's here." "happy"]        
+      linesTalking[iC][MS_GOOD_FRIEND] += [
+        "Hmm... Am I spoiling Mrsha too much? Nah! She's a growing child, she needs to eat a lot. I think." "default"]      
+        
+        
+        
         
     linesTalking[iC][MS_CLOSE_FRIEND] += linesTalking[iC][MS_GOOD_FRIEND]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
