@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.2.1"
+define config.version = "0.2.2"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -178,6 +178,7 @@ init python:
 
     ## Classify files as None to exclude them from the built distributions.
 
+    build.classify('resources/', None)
     build.classify('**~', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)

@@ -6,6 +6,7 @@ traceback.txt
 game/cache
 game/saves
 
+**.bak
 **.rpyc
 **.rpymc
 **.rpy~
