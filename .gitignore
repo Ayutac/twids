@@ -5,3 +5,5 @@ game/cache
 game/saves
 
 **.rpyc
+**.rpymc
+**.rpy~
