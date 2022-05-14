@@ -14,22 +14,24 @@ init -4 python:
     
     linesTalking[iC][MS_STRANGER] += [
         "Sorry, lots of customers here. I'll be with you in a minute!"]
+    linesTalking[iC][MS_STRANGER] += [
+        ("Hey! You there! Read the sign and if you're still not cool with eating with Goblins, I will punch you!", "angry")]
     
     linesTalking[iC][MS_NEW_FRIEND] += [
         ("Nice to see you around!", "happy")]
-        
+
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Hey! Nice day today, isn't it?", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        ("Would you like to have a learn session together?", "smile")]
+        ("Want me to teach you chess?", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        ("Do you know the Riemann hypothesis?", "curious")]
+        ("The door's out of mana again?", "surprised")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "I appreciate classic music."]
+        "Have some pizza, on the house! Just don't tell Lyonette." "sad" ]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "As my hair indicates, violet is my favourite color."]
+        "There's something I want to ask... Wait, damn. It was on the tip of my tongue! Nevermind, I guess it wasn't  important." "default"]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "I like Siberian tigers. They are graceful, strong and exotic. A perfect combination."]
+        "I keep telling you, Goblins are cool. Just talk to them like a normal person and you'll be fine!" "happy"]
         
     linesTalking[iC][MS_CLOSE_FRIEND] += linesTalking[iC][MS_GOOD_FRIEND]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
