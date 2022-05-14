@@ -311,7 +311,7 @@ screen status_bar:
                     scrBody = prota.getStat(STAT_BODY)
                     scrMind = prota.getStat(STAT_MIND)
                     scrHeart = prota.getStat(STAT_HEART)
-                    scrMoney = moneyString(prota.Money)
+                    scrMoney = moneyStringShort(prota.Money)
                 text "AP: [prota.HP]" 
                 text "HP: [prota.BattleHP]" 
                 text "Money: [scrMoney]"

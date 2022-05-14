@@ -29,6 +29,23 @@ init python:
     def moneyString(money):
         return "" + str(money / 200) + " Gp " + str(
             (money%200)/10) + " Sp " + str(money % 10) + " Cp"
+    
+    def moneyStringShort(money):
+        result = "";
+        gp = money/200;
+        if gp != 0:
+            result += str(gp) + " Gp"
+        sp = (money%200)/10
+        if sp != 0:
+            if gp != 0:
+                result += " "
+            result += str(sp) + " Sp"
+        cp = money % 10
+        if cp != 0:
+            if sp != 0 or (sp == 0 and gp != 0):
+                result += " "
+            result += str(cp) + " Cp"
+        return result
         
     def nextDay(gameCanEnd = True):
         global day, MAX_DAYS, isSleeping, BATTLE_HP_INCREASE
