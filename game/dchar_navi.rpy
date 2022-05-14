@@ -33,6 +33,10 @@ label meetErin:
     $ dchar = CHAR_ERIN
     jump meetDchar
 
+label meetPisces:
+    $ dchar = CHAR_PISCES
+    jump meetDchar
+
 
 label meetDchar:
     $ date = None ## if attempt to date did not succeed

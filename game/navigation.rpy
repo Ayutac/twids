@@ -150,6 +150,9 @@ label barkwood:
     menu:
         "Barkwood Forest"
         
+        "meet Pisces":
+            jump meetPisces
+        
         "go to floodplains":
             jump floodplains
     
