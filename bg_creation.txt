@@ -1,0 +1,4 @@
+1. scale the image to 640 wide
+2. oilify with GIMP
+3. scale to bigger than or equal to 1280x720
+4. crop to the solution if needed
