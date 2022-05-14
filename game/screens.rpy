@@ -116,6 +116,14 @@ screen say(who, what):
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
+    ## use quick menu
+    if canSave() or introRunning: ## because one can skip the intro
+        use quick_menu #xalign 0.0 yalign 0.5
+        
+    ## show status bar
+    if showStats():
+        use status_bar
+
 
 ## Make the namebox available for styling through the Character object.
 init python:
@@ -279,6 +287,38 @@ style quick_button:
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
 
+
+ 
+## Status screen ###############################################################
+##
+## A simple status bar.
+
+screen status_bar:
+    
+    frame:
+        style_group 'status'
+        
+        xalign 0.0
+        yalign 0.0
+
+        vbox:
+        
+            hbox:
+                
+                xfill True
+        
+                python:
+                    scrBody = prota.getStat(STAT_BODY)
+                    scrMind = prota.getStat(STAT_MIND)
+                    scrHeart = prota.getStat(STAT_HEART)
+                    scrMoney = moneyString(prota.Money)
+                text "AP: [prota.HP]" 
+                text "HP: [prota.BattleHP]" 
+                text "Money: [scrMoney]"
+                text "Body: [scrBody]"
+                text "Mind: [scrMind]"
+                text "Heart: [scrHeart]"
+                text "Day: [day]/[MAX_DAYS]"
 
 ################################################################################
 ## Main and Game Menu Screens

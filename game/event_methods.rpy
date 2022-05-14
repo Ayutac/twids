@@ -20,11 +20,15 @@ init python:
         
     def showStats():
         return (not (introRunning or endingRunning or ( 
-            creditsRunning or isSleeping or eRecursiveBoxOpened))) and (
-            date == None and roomOfGirl == CHAR_NONE)
+            creditsRunning or isSleeping))) and (
+            date == None)
         
     def canSave():
         return not (introRunning or endingRunning)
+    
+    def moneyString(money):
+        return "" + str(money / 200) + " G " + str(
+            (money%200)/10) + " S " + str(money % 10) + " B"
         
     def nextDay(gameCanEnd = True):
         global day, MAX_DAYS, isSleeping, BATTLE_HP_INCREASE
