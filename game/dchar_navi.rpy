@@ -27,37 +27,15 @@ label endMeeting:
     $ RIQ = None
     $ date = None
     $ invMode = INV_TO_USE
-    if location == LOC_DORM:
-        $ sayDialog((resultVal, "Okay, bye!"))
     jump worldReturn
 
-label meetMisty:
-    $ dchar = CHAR_MISTY
+label meetErin:
+    $ dchar = CHAR_ERIN
     jump meetDchar
 
-label meetSapphire:
-    $ dchar = CHAR_SAPPHIRE
+label meetPisces:
+    $ dchar = CHAR_PISCES
     jump meetDchar
-
-label meetIris:
-    $ dchar = CHAR_IRIS
-    jump meetDchar
-
-label meetCynthia:
-    $ dchar = CHAR_CYNTHIA
-    jump meetDchar
-
-label meetJoy:
-    $ dchar = CHAR_JOY
-    jump meetDchar
-
-label meetJenny:
-    $ dchar = CHAR_JENNY
-    jump meetDchar
-
-#label meetChuu:
-#    $ dchar = CHAR_CHUU
-#    jump meetDchar
 
 
 label meetDchar:
@@ -86,20 +64,20 @@ label meetDchar:
     menu:
         Prota "How should I approach [CIQ.PronounG]?"
         
-        "speak (20 HP)":
-            call speakDchar
+        "speak (20 AP)":
+            call speakDchar from _call_speakDchar
         
-        "ask (10 HP?)":
-            call askDchar
+        "ask (10 AP?)":
+            call askDchar from _call_askDchar
         
-        "battle (10 HP)":
-            call battleDchar
+        #"battle (10 AP)":
+        #    call battleDchar
         
-        "give a gift... (5 HP)":
-            call giftDchar
+        #"give a gift... (5 AP)":
+        #    call giftDchar
             
-        "kiss (5 HP)":
-            call kissDchar
+        "kiss (5 AP)":
+            call kissDchar from _call_kissDchar
         
         "date...":
             jump dateDchar
@@ -274,19 +252,19 @@ label dateDchar:
         
         ## now this looks more complicated than it is:
         dateChoiceSelection = []
-        dateChoiceSelection.append(("shopping mall (" + str(dLD[DATE_LOC_SHOPPING_MALL][1]) + "HP, " +
+        dateChoiceSelection.append(("shopping mall (" + str(dLD[DATE_LOC_SHOPPING_MALL][1]) + "AP, " +
             str(dLD[DATE_LOC_SHOPPING_MALL][2]) + " days, $ " + str(dLD[DATE_LOC_SHOPPING_MALL][3]) + ")", DATE_LOC_SHOPPING_MALL))
         if eSecretBeachDiscovered == False:
-            dateChoiceSelection.append(("ONLY beach (" + str(dLD[DATE_LOC_BEACH_CASUAL][1]) + "HP, " +
+            dateChoiceSelection.append(("ONLY beach (" + str(dLD[DATE_LOC_BEACH_CASUAL][1]) + "AP, " +
                 str(dLD[DATE_LOC_BEACH_CASUAL][2]) + " days, $ " + str(dLD[DATE_LOC_BEACH_CASUAL][3]) + ")", DATE_LOC_BEACH_CASUAL))
         else:
             dateChoiceSelection.append(("casual beach (" + str(dLD[DATE_LOC_BEACH_CASUAL][1]) + 
                 "HP, " + str(dLD[DATE_LOC_BEACH_CASUAL][2]) + " days, $ " + str(dLD[DATE_LOC_BEACH_CASUAL][3]) + ")", DATE_LOC_BEACH_CASUAL))
             dateChoiceSelection.append(("secret beach (" + str(dLD[DATE_LOC_BEACH_SECRET][1]) + 
                 "HP, " + str(dLD[DATE_LOC_BEACH_SECRET][2]) + " days, $ " + str(dLD[DATE_LOC_BEACH_SECRET][3]) + ")", DATE_LOC_BEACH_SECRET))
-        dateChoiceSelection.append(("mountain (" + str(dLD[DATE_LOC_MOUNTAIN][1]) + "HP, " +
+        dateChoiceSelection.append(("mountain (" + str(dLD[DATE_LOC_MOUNTAIN][1]) + "AP, " +
             str(dLD[DATE_LOC_MOUNTAIN][2]) + " days, $ " + str(dLD[DATE_LOC_MOUNTAIN][3]) + ")", DATE_LOC_MOUNTAIN))
-        dateChoiceSelection.append(("forest (" + str(dLD[DATE_LOC_FOREST][1]) + "HP, " +
+        dateChoiceSelection.append(("forest (" + str(dLD[DATE_LOC_FOREST][1]) + "AP, " +
             str(dLD[DATE_LOC_FOREST][2]) + " days, $ " + str(dLD[DATE_LOC_FOREST][3]) + ")", DATE_LOC_FOREST))
         ## dateLocationData[locationNumber / 10 - 1][0][dcharNumber]
         narrator("Where do you want to go?", interact = False)

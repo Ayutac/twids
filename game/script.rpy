@@ -40,8 +40,7 @@ init -11 python:
     ## Global variables:
     day = 0
     location = 0 ## current location of the player
-    partyLoc = 0 ## current party location of the player
-    floor = 1 ## current floor of the player
+    isSleeping = False
     dchar = CHAR_NONE ## datable character player is meeting with
     item = ITEM_NONE ## the selected item
     roomOfDchar = CHAR_NONE ## the owner of the  apartment you are visiting
@@ -100,7 +99,7 @@ label start:
         IA.getRel(0,1)
         SIA = SingleInteraction(IA, CHAR_PROTA)
         
-    call initializeItemDB
+    call initializeItemDB from _call_initializeItemDB
         
     python:
         keyToApartment.addCarryingD(1)

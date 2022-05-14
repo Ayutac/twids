@@ -3,6 +3,25 @@
 # For now, it is text based, but we can change this later
 ###
             
+label worldReturn:
+    if location == LOC_INN:
+        jump inn
+    if location == LOC_INN_GARDEN:
+        jump inn_garden
+    if location == LOC_INN_ROOM:
+        jump inn_room
+    if location == LOC_LISCOR_MARKET:
+        jump liscor_market
+    if location == LOC_LISCOR_WATCH:
+        jump liscor_watch
+    if location == LOC_FLOODPLAINS:
+        jump floodplains
+    if location == LOC_BARKWOOD:
+        jump barkwood
+    if location == LOC_BLOODFIELDS:
+        jump bloodfields
+    jump inn
+
 label inn:
     $ location = LOC_INN
     scene bg inn
@@ -11,6 +30,9 @@ label inn:
         
         "go to room":
             jump inn_room
+        
+        "meet Erin":
+            jump meetErin
             
         "go into garden":
             jump inn_garden
@@ -127,6 +149,9 @@ label barkwood:
     scene bg barkwood
     menu:
         "Barkwood Forest"
+        
+        "meet Pisces":
+            jump meetPisces
         
         "go to floodplains":
             jump floodplains
