@@ -13,13 +13,13 @@ init -4 python:
     
     
     linesTalking[iC][MS_STRANGER] += [
-        ("Sorry, lots of customers here. I'll be with you in a minute!"]
+        "Sorry, lots of customers here. I'll be with you in a minute!"]
     linesTalking[iC][MS_STRANGER] += [
         ("Hey! You there! Have you read the sign? If you're not cool with eating with Goblins, the door is over there.", "angry")]
     linesTalking[iC][MS_STRANGER] += [
-        ("Hold on, Lyonette! Can you get this guy's order? "tired")]
+        ("Hold on, Lyonette! Can you get this guy's order?", "tired")]
     linesTalking[iC][MS_STRANGER] += [
-        ("Hi! Just seat yourself wherever you want."default")]        
+        "Hi! Just seat yourself wherever you want."]        
  
     linesTalking[iC][MS_NEW_FRIEND] += [
         ("Nice to see you around!", "happy")]
@@ -41,15 +41,15 @@ init -4 python:
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("The door's out of mana again?", "surprised")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "Have some pizza, on the house! Just don't tell Lyonette." "happy" ]
+        ("ave some pizza, on the house! Just don't tell Lyonette.", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "There's something I want to ask... Wait, damn. It was on the tip of my tongue! Nevermind, I guess it wasn't  important." "default"]
+        "There's something I want to ask... Wait, damn. It was on the tip of my tongue! Nevermind, I guess it wasn't important."]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "I keep telling you, Goblins are cool. Just talk to them like a normal person and you'll be fine!" "happy"]
+        ("I keep telling you, Goblins are cool. Just talk to them like a normal person and you'll be fine!", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        "Have you met Belgrade and Anand? You should meet them! I think you might like them. Maybe. Or maybe you're more of a Pawn kind of person. He's nice too! But lately, he's been spending more time with Lyonette whenever he's here." "happy"]        
+        ("Have you met Belgrade and Anand? You should meet them! I think you might like them. Maybe. Or maybe you're more of a Pawn kind of person. He's nice too! But lately, he's been spending more time with Lyonette whenever he's here.", "happy")]
       linesTalking[iC][MS_GOOD_FRIEND] += [
-        "Hmm... Am I spoiling Mrsha too much? Nah! She's a growing child, she needs to eat a lot. I think." "default"]      
+        "Hmm... Am I spoiling Mrsha too much? Nah! She's a growing child, she needs to eat a lot. I think."]
         
         
         
