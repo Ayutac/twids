@@ -100,7 +100,7 @@ label start:
         IA.getRel(0,1)
         SIA = SingleInteraction(IA, CHAR_PROTA)
         
-    call initializeItemDB
+    call initializeItemDB from _call_initializeItemDB
         
     python:
         keyToApartment.addCarryingD(1)

@@ -65,10 +65,10 @@ label meetDchar:
         Prota "How should I approach [CIQ.PronounG]?"
         
         "speak (20 AP)":
-            call speakDchar
+            call speakDchar from _call_speakDchar
         
         "ask (10 AP?)":
-            call askDchar
+            call askDchar from _call_askDchar
         
         #"battle (10 AP)":
         #    call battleDchar
@@ -77,7 +77,7 @@ label meetDchar:
         #    call giftDchar
             
         "kiss (5 AP)":
-            call kissDchar
+            call kissDchar from _call_kissDchar
         
         "date...":
             jump dateDchar
