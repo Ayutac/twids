@@ -27,8 +27,8 @@ init python:
         return not (introRunning or endingRunning)
     
     def moneyString(money):
-        return "" + str(money / 200) + " G " + str(
-            (money%200)/10) + " S " + str(money % 10) + " B"
+        return "" + str(money / 200) + " Gp " + str(
+            (money%200)/10) + " Sp " + str(money % 10) + " Cp"
         
     def nextDay(gameCanEnd = True):
         global day, MAX_DAYS, isSleeping, BATTLE_HP_INCREASE
