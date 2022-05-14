@@ -19,7 +19,7 @@ init -4 python:
         ("Nice to see you around!", "happy")]
         
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        ("Hey! Nice day today, isn't it?", "smile")]
+        ("Hey! Nice day today, isn't it?", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Would you like to have a learn session together?", "smile")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
