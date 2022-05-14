@@ -50,8 +50,63 @@ init -11 python:
     battle = None ## stores a battle
     date = None ## stores a date
     mouseOverItem = ITEM_NONE ## item of inventory which is hovered over
+    
+    ## inits needed for proper saving/loading
+    prota = None
+    erin = None
+    pisces = None
+    girllist = None
+    charlist= None
+    IA = None
+    SIA = None
+    
+    masterKey = None
+    keyToApartment = None
+    spareKeyToApartment = None
+    spareKeyToErinsApartment = None
+    spareKeyToPiscesApartment = None
+    
+    inventory = None
+    shop_krshia = None
+    
+    Item.initialize(LEN_CHAR, CHAR_PROTA) ## very important!
+    
+    noIntro = False
 
 label start:
+    
+    if creditsRunning == True:
+        jump credits
+    
+    python:
+        prota = DSC(STATS, "You", (10, 10, 10), money = 100)
+        prota.restoreHP()
+        prota.restoreBattleHP() 
+        erin = DSC(STATS, "Erin", (10, 10, 50), crypt7='erineri',
+            crypt6='eriner', crypt5='erine',
+            unname="that crazy [Innkeeper]",
+            giftReaction = dcharGiftEffect[CHAR_ERIN])
+        pisces = DSC(STATS, "Erin", (20, 35, 15), crypt7='piscesp',
+            unname="the [Nechromancer]",
+            giftReaction = dcharGiftEffect[CHAR_PISCES])
+            
+        ## create lists
+        dcharlist = [erin, pisces]
+        charlist = dcharlist + [prota] ## always at the end!!
+        
+        ## create relationships
+        #narrator(str(type(charlist)))
+        IA = Interaction(charlist)
+        IA.getRel(0,1)
+        SIA = SingleInteraction(IA, CHAR_PROTA)
+        
+    call initializeItemDB
+        
+    python:
+        keyToApartment.addCarryingD(1)
+        spareKeyToApartment.addStoredD(1)
+        spareKeyToErinsApartment.addCarrying(CHAR_ERIN, 1)
+        spareKeyToErinsApartment.addCarrying(CHAR_PISCES, 1)
     
     jump inn
 

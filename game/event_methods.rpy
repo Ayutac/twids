@@ -28,17 +28,16 @@ init python:
         
     def nextDay(gameCanEnd = True):
         global day, MAX_DAYS, isSleeping, BATTLE_HP_INCREASE
-        for i in range(0, len(girllist)):
+        for i in range(0, len(dcharlist)):
             SIA.getRel(i).increaseCorruptionPoints(-50)
             SIA.getRel(i).resetKissedToday()
             SIA.getRel(i).resetPhonedToday()
-            girllist[i].restoreHP()
-            girllist[i].restoreBattleHP()
+            dcharlist[i].restoreHP()
+            dcharlist[i].restoreBattleHP()
         day = day + 1
         isSleeping = False
         if gameCanEnd == True and day > MAX_DAYS:
             renpy.jump('ending')
-        calculateRoomAvailability()
             
     def sleepGood():
         global isSleeping

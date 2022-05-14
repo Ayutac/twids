@@ -46,7 +46,7 @@ label inn_room:
         
         "sleep":
             $ sleepGood()
-            jump apartment
+            jump inn_room
     
     jump inn_room
 
