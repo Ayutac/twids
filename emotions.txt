@@ -1,0 +1,10 @@
+## Emotionselection
+
+# angry
+# default
+# embarrassed (also to be used as flirty)
+# happy
+# sad
+# shocked (negative turn of events)
+# surprised (positive turn of events)
+# tired
