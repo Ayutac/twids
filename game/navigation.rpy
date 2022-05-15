@@ -42,6 +42,24 @@ label inn:
                 $ resultVal = moneyStringShort(resultVal)
                 "You earned [resultVal]!"
             jump inn
+        
+        "play chess (25 AP)":
+            $ resultVal = prota.train(25, (0, 3+random.randint(-1,1), 0))
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = resultVal[1]
+                "Your mind stat got raised by [resultVal]!"
+            jump inn
+        
+        "practice with players (30 AP)":
+            $ resultVal = prota.train(50, (0, 0, 4+random.randint(-1,1)))
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = resultVal[2]
+                "Your heart stat got raised by [resultVal]!"
+            jump inn
             
         "go into garden":
             jump inn_garden
@@ -73,6 +91,15 @@ label inn_weights:
     scene bg inn_weights
     menu:
         "Weights room"
+        
+        "train (50 AP)":
+            $ resultVal = prota.train(50, (6+random.randint(-1,1), 0, 0))
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = resultVal[0]
+                "Your body stat got raised by [resultVal]!"
+            jump inn_weights
         
         "go back to inn":
             jump inn
