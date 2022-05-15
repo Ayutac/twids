@@ -61,7 +61,7 @@ label inn_room:
     #$ playMusic('pewter_city.ogg')
     scene bg inn_room
     menu:
-        "Own room"
+        "Your room"
         
         "get out here":
             jump inn

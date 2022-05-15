@@ -107,6 +107,8 @@ label start:
         spareKeyToErinsApartment.addCarrying(CHAR_ERIN, 1)
         spareKeyToErinsApartment.addCarrying(CHAR_PISCES, 1)
     
-    jump inn
+    scene bg inn_room
+    $ sleepGood()
+    jump inn_room
 
     return
