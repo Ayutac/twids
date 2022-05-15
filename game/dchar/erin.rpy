@@ -57,7 +57,7 @@ init -4 python:
     linesTalking[iC][MS_CLOSE_FRIEND] += linesTalking[iC][MS_GOOD_FRIEND]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
         ("Are you busy? Can I take a seat here for a breather?","sad"),
-        ("Sometimes, I think to myself "What would've happened if I stayed home?" but then I see this and now I think...","default"),
+        "Sometimes, I think to myself \"What would've happened if I stayed home?\" but then I see this and now I think...",
         ("I built a nice place here, haven't I? A home not just for me...", "happy")]]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
         ("Have you- Have you ever worried about not being there for people when they need you?", "sad"),
@@ -66,7 +66,7 @@ init -4 python:
         ("What if they get hurt? Or worse! W-What if... What if they- What if they don't come back?", "sad"),
         ("They're doing these dangerous things while I'm here, just... Just waiting for them. I'Im sorry for the heavy stuff.", "sad")]]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
-        ("I think being strong isn't just about being able to punch stuff really hard or being smart, like Ryoka.", "default"),
+        "I think being strong isn't just about being able to punch stuff really hard or being smart, like Ryoka.",
         ("It's about being there for people. I think?", "happy"),
         ("Well, I guess what I'm saying is that I want to be there for my friends during their happy or sad moments..", "happy"),
         ("Someone needs to cheer for them, right?", "happy")]]
