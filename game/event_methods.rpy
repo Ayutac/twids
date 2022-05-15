@@ -5,6 +5,37 @@
 ###
     
 init python:
+    musicPath = '/audio/'
+    
+    def playMusic(name, fade = 0.3, loop = True, fullName = False):
+        global musicPath, lastMusic
+        if not fullName:
+            name = musicPath + name
+        if name == renpy.music.get_playing():
+            return
+        lastMusic = renpy.music.get_playing()
+        renpy.music.play(name, 
+            loop = loop, fadein = fade, fadeout = fade, tight = True)
+        return
+        
+    def playLastMusic(fade = 0.3):
+        if lastMusic == None:
+            return
+        playMusic(lastMusic, fade, fullName = True)
+        return
+        
+    def playSound(name, pause = None, hard = False):
+        name = soundPath + name
+        if pause == None:
+            renpy.sound.play(name)
+            return
+        oldVolume = _preferences.get_volume('music')
+        renpy.music.set_volume(0.0, delay=0.3)
+        renpy.sound.play(name)
+        while renpy.sound.get_playing('sound') != None:
+            renpy.pause(0.05, hard)
+        renpy.music.set_volume(oldVolume, delay=0.3)
+        return
 
     def sumArrayOverDays(array, dayRange = None):
         global day, MAX_DAYS

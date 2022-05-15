@@ -24,6 +24,7 @@ label worldReturn:
 
 label inn:
     $ location = LOC_INN
+    $ playMusic('tenderness.mp3')
     scene bg inn
     menu:
         "The Wandering Inn"

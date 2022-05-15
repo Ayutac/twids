@@ -1,4 +1,6 @@
-# background images: morgue file + olify of gimp
+# background images: 
+old: morgue file + olify of gimp
+new: probably QtheBird
 
 # character images: LeChatDemon
 
@@ -6,7 +8,7 @@
 
 # programming: Ayutac
 
-# music:
+# Music: https://www.bensound.com/royalty-free-music
 
 # twi: huge shoutout
 
