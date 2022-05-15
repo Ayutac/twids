@@ -36,7 +36,7 @@ label inn:
             
         "help out inn kitchen (30 AP)":
             $ resultVal = prota.work(30, (.04, .04, .12))
-            if resultVal == -1:
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
                 "You don't have enough energy left."
             else:
                 $ resultVal = moneyStringShort(resultVal)
@@ -123,7 +123,7 @@ label shop_krshia:
             
         "help out Krshia (25 AP)":
             $ resultVal = prota.work(25, (.0333, .0333, .1))
-            if resultVal == -1:
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
                 "You don't have enough energy left."
             else:
                 $ resultVal = moneyStringShort(resultVal)
@@ -149,7 +149,7 @@ label liscor_watch:
             
         "help out Zevara (35 AP)":
             $ resultVal = prota.work(35, (.15, .05, .05))
-            if resultVal == -1:
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
                 "You don't have enough energy left."
             else:
                 $ resultVal = moneyStringShort(resultVal)
