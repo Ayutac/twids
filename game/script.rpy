@@ -54,7 +54,7 @@ init -11 python:
     prota = None
     erin = None
     pisces = None
-    girllist = None
+    dcharlist = None
     charlist= None
     IA = None
     SIA = None
