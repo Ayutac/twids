@@ -34,10 +34,19 @@ label inn:
         "meet Erin":
             jump meetErin
             
+        "help out inn kitchen (30 AP)":
+            $ resultVal = prota.work(30, (.04, .04, .12))
+            if resultVal == -1:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = moneyStringShort(resultVal)
+                "You earned [resultVal]!"
+            jump inn
+            
         "go into garden":
             jump inn_garden
             
-        "go into weightsroom":
+        "go into weights room":
             jump inn_weights
         
         "go outside":
@@ -63,7 +72,7 @@ label inn_weights:
     $ location = LOC_INN_WEIGHTS
     scene bg inn_weights
     menu:
-        "Weightsroom"
+        "Weights room"
         
         "go back to inn":
             jump inn
@@ -111,6 +120,15 @@ label shop_krshia:
     scene bg shop_krshia
     menu:
         "Krshia's Shop"
+            
+        "help out Krshia (25 AP)":
+            $ resultVal = prota.work(25, (.0333, .0333, .1))
+            if resultVal == -1:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = moneyStringShort(resultVal)
+                "You earned [resultVal]!"
+            jump shop_krshia
         
         #"buy":
         #    python:
@@ -128,6 +146,15 @@ label liscor_watch:
     scene bg liscor_watch
     menu:
         "Liscor Watch barracks"
+            
+        "help out Zevara (35 AP)":
+            $ resultVal = prota.work(35, (.15, .05, .05))
+            if resultVal == -1:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = moneyStringShort(resultVal)
+                "You earned [resultVal]!"
+            jump liscor_watch
         
         "go to Market Street":
             jump liscor_market
