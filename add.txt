@@ -9,6 +9,7 @@ Let's call them X (or x if not capitalized)
 5. add their data (mostly dialog lines) as game/dchar/x.rpy
 6. add a way to get to them into game/navigation.rpy and game/dchar_navi.rpy
 7. add sprites for all their emotions into game/images/characters/ (Format: x_emotion.png)
+8. link the sprites in game/load_images.rpy
 
 # How to add a location
 
@@ -17,3 +18,4 @@ Let's call it X
 1. add LOC_X constant to game/constants.rpy
 2. add location to game/navigation.rpy
 3. add background as game/images/backgrounds/x.jpg
+4. link the background in game/load_images.rpy
