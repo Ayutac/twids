@@ -124,6 +124,7 @@ init -150 python:
     LOC_WORLD           =   0
     LOC_INN             = LOC_WORLD
     LOC_INN_GARDEN      =   1
+    LOC_INN_WEIGHTS     =   2
     LOC_INN_ROOM        = 100
     LOC_LISCOR_MARKET   = 200
     LOC_LISCOR_WATCH    = 201

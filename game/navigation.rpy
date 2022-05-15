@@ -36,6 +36,9 @@ label inn:
             
         "go into garden":
             jump inn_garden
+            
+        "go into weightsroom":
+            jump inn_weights
         
         "go outside":
             jump floodplains
@@ -55,6 +58,17 @@ label inn_garden:
             jump inn
     
     jump inn_garden
+            
+label inn_weights:
+    $ location = LOC_INN_WEIGHTS
+    scene bg inn_weights
+    menu:
+        "Weightsroom"
+        
+        "go back to inn":
+            jump inn
+    
+    jump inn_weights
         
 label inn_room:
     $ location = LOC_INN_ROOM

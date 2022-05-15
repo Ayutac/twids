@@ -15,6 +15,7 @@ init -800:
     image bg inn = imgBgPath + 'inn.jpg'
     image bg inn_room = imgBgPath + 'inn_room.jpg'
     image bg inn_garden = imgBgPath + 'inn_garden.jpg'
+    image bg inn_weights = imgBgPath + 'inn_weights.jpg'
     image bg liscor_market = imgBgPath + 'liscor_market.jpg'
     image bg shop_krshia = imgBgPath + 'shop_krshia.jpg'
     image bg liscor_watch = imgBgPath + 'liscor_watch.jpg'
