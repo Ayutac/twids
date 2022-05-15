@@ -31,8 +31,8 @@ init -4 python:
         ("I see you over there. I guessing that you're gonna be a regular?", "happy")]        
     linesTalking[iC][MS_NEW_FRIEND] += [
         ("Oh, oh! Oh hey! It's you! Did you like the pizza or the burger? The Blue Fruit juice? Wait, don't tell me! You liked the plays, don't you?", "happy")]        
-     linesTalking[iC][MS_NEW_FRIEND] += [
-        ("By the way, there are rooms upstairs if you need a place to sleep.", "default")]       
+    linesTalking[iC][MS_NEW_FRIEND] += [
+        "By the way, there are rooms upstairs if you need a place to sleep."]       
         
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Hey! Nice day today, isn't it? I kind of want to roll down the hill to be honest.", "happy")]
@@ -48,7 +48,7 @@ init -4 python:
         ("I keep telling you, Goblins are cool. Just talk to them like a normal person and you'll be fine!", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Have you met Belgrade and Anand? You should meet them! I think you might like them. Maybe. Or maybe you're more of a Pawn kind of person. He's nice too! But lately, he's been spending more time with Lyonette whenever he's here.", "happy")]
-      linesTalking[iC][MS_GOOD_FRIEND] += [
+    linesTalking[iC][MS_GOOD_FRIEND] += [
         "Hmm... Am I spoiling Mrsha too much? Nah! She's a growing child, she needs to eat a lot. I think."]
         
         
