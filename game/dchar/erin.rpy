@@ -28,7 +28,7 @@ init -4 python:
     linesTalking[iC][MS_NEW_FRIEND] += [
         ("Still the same thing as last time?", "happy")]
     linesTalking[iC][MS_NEW_FRIEND] += [
-        ("I see you over there. I guessing that you're gonna be a regular?", "happy")]        
+        ("I see you over there. I'm guessing that you're gonna be a regular?", "happy")]        
     linesTalking[iC][MS_NEW_FRIEND] += [
         ("Oh, oh! Oh hey! It's you! Did you like the pizza or the burger? The Blue Fruit juice? Wait, don't tell me! You liked the plays, don't you?", "happy")]        
     linesTalking[iC][MS_NEW_FRIEND] += [
@@ -41,7 +41,7 @@ init -4 python:
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("The door's out of mana again?", "surprised")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
-        ("ave some pizza, on the house! Just don't tell Lyonette.", "happy")]
+        ("Have some pizza, on the house! Just don't tell Lyonette.", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
         "There's something I want to ask... Wait, damn. It was on the tip of my tongue! Nevermind, I guess it wasn't important."]
     linesTalking[iC][MS_GOOD_FRIEND] += [
@@ -56,12 +56,24 @@ init -4 python:
         
     linesTalking[iC][MS_CLOSE_FRIEND] += linesTalking[iC][MS_GOOD_FRIEND]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
-        ("Please tell me when I talk to much.","serious"),
-        ("I've read that open communication is the key to a healthy relationship.", "smile")]]
+        ("Are you busy? Can I take a seat here for a breather?","sad"),
+        "Sometimes, I think to myself \"What would've happened if I stayed home?\" but then I see this and now I think...",
+        ("I built a nice place here, haven't I? A home not just for me...", "happy")]]
     linesTalking[iC][MS_CLOSE_FRIEND] += [[
-        ("Want in on a secret?", "excited"),
-        ("I like to eat hamburgers, even though its fast food...", "embarrassed"),
-        ("...", "smile")]]
+        ("Have you- Have you ever worried about not being there for people when they need you?", "sad"),
+        ("Or if you're not doing enough for them? Yeah... I get that sometimes.", "sad"),
+        ("Whenever the Horns go on some dangerous adventure, or when I hear about Belgrade and Anand's job, I feel so worried.", "sad"),
+        ("What if they get hurt? Or worse! W-What if... What if they- What if they don't come back?", "sad"),
+        ("They're doing these dangerous things while I'm here, just... Just waiting for them. I'Im sorry for the heavy stuff.", "sad")]]
+    linesTalking[iC][MS_CLOSE_FRIEND] += [[
+        "I think being strong isn't just about being able to punch stuff really hard or being smart, like Ryoka.",
+        ("It's about being there for people. I think?", "happy"),
+        ("Well, I guess what I'm saying is that I want to be there for my friends during their happy or sad moments..", "happy"),
+        ("Someone needs to cheer for them, right?", "happy")]]
+
+
+
+
     
     linesTalking[iC][MS_BOYFRIEND] += [[
         ("I'll spare you the embarrassment of asking, so consider the follwing information a favour.", "serious"),
