@@ -126,6 +126,7 @@ label inn_room:
 
 label liscor_market:
     $ location = LOC_LISCOR_MARKET
+    $ playMusic('onceagain.mp3')
     scene bg liscor_market
     menu:
         "Market Street of Liscor"
@@ -196,6 +197,7 @@ label liscor_watch:
 label floodplains:
     $ location = LOC_FLOODPLAINS
     scene bg floodplains
+    $ playMusic('instinct.mp3')
     menu:
         "Floodplains of Liscor"
         
@@ -229,6 +231,7 @@ label barkwood:
 
 label bloodfields:
     $ location = LOC_BLOODFIELDS
+    $ playMusic('evolution.mp3')
     scene bg bloodfields
     menu:
         "Bloodfields"

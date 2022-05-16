@@ -7,7 +7,7 @@
 init python:
     musicPath = '/audio/'
     
-    def playMusic(name, fade = 0.3, loop = True, fullName = False):
+    def playMusic(name, fade = 0.5, loop = True, fullName = False):
         global musicPath, lastMusic
         if not fullName:
             name = musicPath + name
@@ -18,7 +18,7 @@ init python:
             loop = loop, fadein = fade, fadeout = fade, tight = True)
         return
         
-    def playLastMusic(fade = 0.3):
+    def playLastMusic(fade = 0.5):
         if lastMusic == None:
             return
         playMusic(lastMusic, fade, fullName = True)

@@ -108,6 +108,7 @@ label start:
         spareKeyToErinsApartment.addCarrying(CHAR_PISCES, 1)
     
     scene bg inn_room
+    $ playMusic('tenderness.mp3')
     $ sleepGood()
     jump inn_room
 
