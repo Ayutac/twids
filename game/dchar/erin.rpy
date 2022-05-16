@@ -74,18 +74,30 @@ init -4 python:
 
 
 
-    
+      linesTalking[iC][MS_BOYFRIEND] += [[
+        ("Heyyyyyyy, dude. Is it me or a-a-are y-y- Okay, I'm not good at this.","embarrassed"),
+        ("I'm not good with flirting, okay?", "embarrassed"),
+        ("I think that last time I flirted with someone is through a chess game back at home. Is playing chess even considered flirting?"),
+        ("Yeah, it didn't turn out great. I thought she was a guy and she  thought I was a guy. It turns out she was a girl from Poland.", "shocked"),
+        ("It was... It was an awkward moment...","sad"), 
+        (So, want to play a round of chess with me?","happy")]]  
     linesTalking[iC][MS_BOYFRIEND] += [[
-        ("I'll spare you the embarrassment of asking, so consider the follwing information a favour.", "serious"),
-        ("I'm still a fair maiden...", "embarrassed")]]
+        ("Sooo... Uh, yeah... W-We're a thing now, I guess.", "surprised"),
+        ("W-WAIT! D-Don't get it wrong! I'm happy about it! It's just...", "embarrassed"),
+        ("I don't know. It's sudden and I wasn't really expecting this.", "embarrassed"),
+        ("... But this is nice.", "happy")]]
+    linesTalking[iC][MS_BOYFRIEND] += [[
+        ("What do you think about hand holding? I'm sure it's not that..."),
+        ("I saw that smirk Lyonette! Hey! Get back here! Sorry, talk to you later!", "embarrassed")]]
     linesTalking[iC][MS_BOYFRIEND] += [
-        ("I don't know what I should tell my parents...", "nervous")]
-    linesTalking[iC][MS_BOYFRIEND] += [
-        ("Want to go camping sometime? Just you and me, alone together in the forest", "flirty")]
+        ("Hmm. Want to go on a date? I'm not sure of any nice places to go to except Pallass and Liscor though."),
+        ("Or... We can watch a play together. You, me, in a blanket and popcorn.","happy"),
+        ("And play chess after! Wait, why are you looking at me like that?")]
     
     linesTalking[iC][MS_LOVER] += linesTalking[iC][MS_BOYFRIEND]
     linesTalking[iC][MS_LOVER] += [
-        ("I would really appreciate you coming over tonight...", "flirty")]
+        ("Hey. Come closer. Closer. Um),
+        (... Iloveyou,okaybye! Gotta go do innkeeper things!", "embarassed")]
         
     ## we don't want this line after they became lovers
     linesTalking[iC][MS_BOYFRIEND] += [
