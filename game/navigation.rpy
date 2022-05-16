@@ -41,6 +41,7 @@ label inn:
                 "You don't have enough energy left."
             else:
                 $ resultVal = moneyStringShort(resultVal)
+                $ playSound("coin_drop.mp3")
                 "You earned [resultVal]!"
             jump inn
         
@@ -156,6 +157,7 @@ label shop_krshia:
                 "You don't have enough energy left."
             else:
                 $ resultVal = moneyStringShort(resultVal)
+                $ playSound("coin_drop.mp3")
                 "You earned [resultVal]!"
             jump shop_krshia
         
@@ -182,6 +184,7 @@ label liscor_watch:
                 "You don't have enough energy left."
             else:
                 $ resultVal = moneyStringShort(resultVal)
+                $ playSound("coin_drop.mp3")
                 "You earned [resultVal]!"
             jump liscor_watch
         

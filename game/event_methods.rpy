@@ -5,7 +5,8 @@
 ###
     
 init python:
-    musicPath = '/audio/'
+    musicPath = '/audio/music/'
+    soundPath = '/audio/sounds/'
     
     def playMusic(name, fade = 0.5, loop = True, fullName = False):
         global musicPath, lastMusic
