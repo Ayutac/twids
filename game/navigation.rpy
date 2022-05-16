@@ -55,7 +55,7 @@ label inn:
             jump inn
         
         "practice with players (30 AP)":
-            $ resultVal = prota.train(50, (0, 0, 4+random.randint(-1,1)))
+            $ resultVal = prota.train(30, (0, 0, 4+random.randint(-1,1)))
             if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
                 "You don't have enough energy left."
             else:
