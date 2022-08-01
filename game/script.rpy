@@ -85,8 +85,8 @@ label start:
             crypt6='eriner', crypt5='erine',
             unname="that crazy [Innkeeper]",
             giftReaction = dcharGiftEffect[CHAR_ERIN])
-        pisces = DSC(STATS, "Erin", (20, 35, 15), crypt7='piscesp',
-            unname="the [Nechromancer]",
+        pisces = DSC(STATS, "Pisces", (20, 35, 15), crypt7='piscesp',
+            unname="the [Necromancer]", genS = "'", gender = "male",
             giftReaction = dcharGiftEffect[CHAR_PISCES])
             
         ## create lists
