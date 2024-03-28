@@ -31,10 +31,7 @@ label inn:
         
         "go to room":
             jump inn_room
-        
-        "meet Erin":
-            jump meetErin
-            
+
         "help out inn kitchen (30 AP)":
             $ resultVal = prota.work(30, (.04, .04, .12))
             if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
@@ -44,30 +41,15 @@ label inn:
                 $ playSound("coin_drop.mp3")
                 "You earned [resultVal]!"
             jump inn
-        
-        "play chess (25 AP)":
-            $ resultVal = prota.train(25, (0, 3+random.randint(-1,1), 0))
-            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
-                "You don't have enough energy left."
-            else:
-                $ resultVal = resultVal[1]
-                "Your mind stat got raised by [resultVal]!"
-            jump inn
-        
-        "practice with players (30 AP)":
-            $ resultVal = prota.train(30, (0, 0, 4+random.randint(-1,1)))
-            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
-                "You don't have enough energy left."
-            else:
-                $ resultVal = resultVal[2]
-                "Your heart stat got raised by [resultVal]!"
-            jump inn
-            
+
         "go into garden":
             jump inn_garden
             
         "go into weights room":
             jump inn_weights
+
+        "go into theatre area":
+            jump inn_theatre
         
         "go outside":
             jump floodplains
@@ -76,6 +58,42 @@ label inn:
             jump liscor_market
     
     jump inn
+
+label inn_theatre:
+    $ location = LOC_INN_THEATRE
+    $ playMusic('tenderness.mp3')
+    scene bg inn_theatre
+    menu:
+        "The Grand Theatre"
+
+        "meet Erin":
+            jump meetErin
+
+        "play chess (25 AP)":
+            $ resultVal = prota.train(25, (0, 3+random.randint(-1,1), 0))
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = resultVal[1]
+                "Your mind stat got raised by [resultVal]!"
+            jump inn
+
+        "practice with players (30 AP)":
+            $ resultVal = prota.train(30, (0, 0, 4+random.randint(-1,1)))
+            if resultVal == ERR_CHAR1_NOT_ENOUGH_HP:
+                "You don't have enough energy left."
+            else:
+                $ resultVal = resultVal[2]
+                "Your heart stat got raised by [resultVal]!"
+            jump inn
+
+        "go into garden":
+            jump inn_garden
+
+        "go to entrance area":
+            jump inn
+
+    jump inn_theatre
             
 label inn_garden:
     $ location = LOC_INN_GARDEN
@@ -85,6 +103,9 @@ label inn_garden:
         
         "go back to inn":
             jump inn
+
+        "go into theatre area":
+            jump inn_theatre
     
     jump inn_garden
             
